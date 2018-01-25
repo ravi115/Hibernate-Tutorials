@@ -27,8 +27,8 @@ import javax.persistence.Table;
  * Fast when querying concrete subclasses (queries directly access subclass table)
  * 
  * Cons : -
- * May be slow when you query/lazy load abstract superclasses (union all and subquery)
- * Cannot introduce foreign key constrains for superclasses references (like in  Photo example)
+ * May be slow when you query/lazy load abstract super classes (union all and subquery)
+ * Cannot introduce foreign key constrains for super classes references (like in  Photo example)
  * 
  * @author raviranjan
  *

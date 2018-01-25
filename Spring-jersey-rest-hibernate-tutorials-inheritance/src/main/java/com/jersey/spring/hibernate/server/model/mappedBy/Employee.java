@@ -20,7 +20,7 @@ import javax.persistence.MappedSuperclass;
  * disadvantages : -
  *1.  
  * This strategy is not good if we query using parent class.
- * since hibernate will fire many query which unneccessary 
+ * since hibernate will fire many query which unnecessary 
  * as per requirement.
  * 
  * 2. 
@@ -106,7 +106,5 @@ public abstract class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", company=" + company + "]";
 	}
-	
-	
 	
 }

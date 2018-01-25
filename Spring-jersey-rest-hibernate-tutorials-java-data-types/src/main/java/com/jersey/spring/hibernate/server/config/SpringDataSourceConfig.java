@@ -14,22 +14,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.jersey.spring.hibernate.server.model.mappedBy.ContractEmployee;
-import com.jersey.spring.hibernate.server.model.mappedBy.Employee;
-import com.jersey.spring.hibernate.server.model.mappedBy.RegularEmployee;
-import com.jersey.spring.hibernate.server.model.tableperclasshierarchey.Animal;
-import com.jersey.spring.hibernate.server.model.tableperclasshierarchey.Cat;
-import com.jersey.spring.hibernate.server.model.tableperclasshierarchey.Dog;
-import com.jersey.spring.hibernate.server.model.tableperconcreteclass.Laptop;
-import com.jersey.spring.hibernate.server.model.tableperconcreteclass.Mobile;
-import com.jersey.spring.hibernate.server.model.tableperconcreteclass.OperatingSystem;
-import com.jersey.spring.hibernate.server.model.tableperconcreteclass.Phones;
-import com.jersey.spring.hibernate.server.model.tableperconcreteclass.Tablets;
-import com.jersey.spring.hibernate.server.model.tablepereveryclass.ClassRoom;
-import com.jersey.spring.hibernate.server.model.tablepereveryclass.JuniorRoom;
-import com.jersey.spring.hibernate.server.model.tablepereveryclass.Library;
-import com.jersey.spring.hibernate.server.model.tablepereveryclass.School;
-import com.jersey.spring.hibernate.server.model.tablepereveryclass.SeniorRoom;
+import com.jersey.spring.hibernate.server.model.JavaDataTypesModel;
 
 
 @Configuration
@@ -66,22 +51,7 @@ public class SpringDataSourceConfig {
 		sessionFactoryBean
 		.setAnnotatedClasses(
 				new Class[] { 
-						Employee.class,
-						RegularEmployee.class,
-						ContractEmployee.class,
-						Animal.class,
-						Cat.class,
-						Dog.class,
-						Mobile.class,
-						OperatingSystem.class,
-						Laptop.class,
-						Phones.class,
-						Tablets.class,
-						School.class, 
-						ClassRoom.class,
-						Library.class, 
-						JuniorRoom.class, 
-						SeniorRoom.class 
+						JavaDataTypesModel.class
 				});
 		sessionFactoryBean.setDataSource(getDatasource());
 		sessionFactoryBean.afterPropertiesSet();
